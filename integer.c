@@ -1,12 +1,17 @@
 #include "main.h"
-
+#include <limits.h>
 int print_d(va_list args)
  {
     int num = va_arg(args, int);
     char buffer[20];
     int i = 0;
     int is_negative = 0;
-    int j;
+    int j
+    if (num == INT_MIN) {
+        buffer[i++] = '2';
+        num = -(num / 10);
+        is_negative = 1;
+    }
 
     if (num < 0) {
         is_negative = 1;
@@ -32,6 +37,4 @@ int print_d(va_list args)
     fwrite(buffer, sizeof(char), i, stdout);
     return i;
 }
-
-
 
