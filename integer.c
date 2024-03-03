@@ -6,7 +6,7 @@ int print_d(va_list args)
     char buffer[20];
     int i = 0;
     int is_negative = 0;
-    int j
+    int j;
     if (num == INT_MIN) {
         buffer[i++] = '2';
         num = -(num / 10);
