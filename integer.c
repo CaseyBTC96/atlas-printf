@@ -1,12 +1,14 @@
 #include "main.h"
 #include <limits.h>
+#include <string.h>
+
 int print_d(va_list args)
  {
     int num = va_arg(args, int);
     char buffer[20];
     int i = 0;
     int is_negative = 0;
-    int j, k;
+    int j;
     if (num == INT_MIN) {
         char min[] = "-2147483648";
         int len = strlen(min);
