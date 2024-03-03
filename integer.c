@@ -1,6 +1,7 @@
 #include "main.h"
 #include <limits.h>
 #include <string.h>
+#include <stdlib.h>
 
 int print_d(va_list args)
 {
