@@ -36,7 +36,6 @@ int print_d(va_list args)
         buffer[j] = buffer[i - j - 1];
         buffer[i - j - 1] = temp;
     }
-    putchar('!');
     fwrite(buffer, sizeof(char), i, stdout);
     return i;
 }
