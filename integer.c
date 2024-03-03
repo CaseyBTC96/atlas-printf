@@ -5,6 +5,7 @@ int print_d(va_list args)
     int num = va_arg(args, int);
     char buffer[20];
     int i = 0;
+    int j;
 
     while (num != 0) {
         int digit = num % 10;
@@ -15,7 +16,7 @@ int print_d(va_list args)
         buffer[i++] = '0';
     }
 
-    for (int j = 0; j < i / 2; j++)
+    for (j = 0; j < i / 2; j++)
     {
         char temp = buffer[j];
         buffer[j] = buffer[i - j - 1];
