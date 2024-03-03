@@ -13,7 +13,7 @@ int print_d(va_list args)
         char min[] = "-2147483648";
         int len = strlen(min);
         fwrite(min, sizeof(char), len, stdout);
-        putchar("!");
+        putchar('!');
         return len;
     }
 
