@@ -3,43 +3,42 @@
 #include <string.h>
 
 int print_d(va_list args)
- {
-    int num = va_arg(args, int);
-    char buffer[20];
-    int i = 0;
-    int is_negative = 0;
-    int k;
+{
+    int count = 0;
+    int calc, hold, track_dig;
+    int value = va_arg(args, int);
 
-    if (num == INT_MIN) {
-        char min[] = "-2147483648";
-        int len = 11;
-        fwrite(min, sizeof(char), len, stdout);
-        return len;
+    if (value == INT_MIN) {
+        putchar('-');
+        count++;
+        calc = INT_MAX;
+    } else if (value < 0) {
+        putchar('-');
+        count++;
+        calc = abs(value);
     } else {
-        if (num < 0) {
-            is_negative = 1;
-            num = -num;
-        }
-
-
-        do {
-            int digit = num % 10;
-            buffer[i++] = digit + '0';
-            num /= 10;
-        } while (num != 0);
-
-
-        if (is_negative) {
-            buffer[i++] = '-';
-        }
-
-        for (k = 0; k < i / 2; k++) {
-            char temp = buffer[k];
-            buffer[k] = buffer[i - k - 1];
-            buffer[i - k - 1] = temp;
-        }
-
-        fwrite(buffer, sizeof(char), i, stdout);
-        return i;
+        calc = value;
     }
+
+    hold = calc;
+    track_dig = 1;
+
+    while (hold >= 10) {
+        hold = hold / 10;
+        track_dig = track_dig * 10;
+    }
+
+    while (track_dig >= 1) {
+        if (value == INT_MIN && track_dig == 1) {
+            putchar('8');
+            count++;
+            track_dig = track_dig / 10;
+        } else {
+            count++;
+            putchar((calc / track_dig) % 10 + '0');
+            track_dig = track_dig / 10;
+        }
+    }
+
+    return count;
 }
