@@ -8,7 +8,7 @@ int print_d(va_list args)
     int is_negative = 0;
     int j, k;
     if (num == INT_MIN) {
-        char min[] = "2147483648";
+        char min[] = "-2147483648";
         for (k = 0; k < 11; k++) 
         {
             buffer[i++] = min[k];
