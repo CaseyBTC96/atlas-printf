@@ -6,6 +6,7 @@ int print_d(va_list args)
     char buffer[20];
     int i = 0;
     int is_negative = 0;
+    int j;
 
     if (num < 0) {
         is_negative = 1;
@@ -22,7 +23,7 @@ int print_d(va_list args)
         buffer[i++] = '-';
     }
 
-    for (int j = 0; j < i / 2; j++) {
+    for (j = 0; j < i / 2; j++) {
         char temp = buffer[j];
         buffer[j] = buffer[i - j - 1];
         buffer[i - j - 1] = temp;
