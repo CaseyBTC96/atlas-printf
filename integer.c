@@ -13,7 +13,8 @@ int print_d(va_list args)
         {
             buffer[i++] = min[k];
         }
-        return fwrite(buffer, sizeof(char), i, stdout);
+        fwrite(buffer, sizeof(char), i, stdout);
+        return i;
     }
 
     if (num < 0) {
