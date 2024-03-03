@@ -9,7 +9,7 @@ int print_d(va_list args)
     int j;
     if (num == INT_MIN) {
         buffer[i++] = '2';
-        num = -(num / 10);
+        num = -(num / -10);
         is_negative = 1;
     }
 
