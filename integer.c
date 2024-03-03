@@ -6,10 +6,10 @@ int print_d(va_list args)
     char buffer[20];
     int i = 0;
     int is_negative = 0;
-    int j;
+    int j, k;
     if (num == INT_MIN) {
         char min[] = "2147483648"
-        for (int k = 0; k < 11; k++) 
+        for (k = 0; k < 11; k++) 
         {
             buffer[i++] = min[k];
         }
