@@ -8,9 +8,12 @@ int print_d(va_list args)
     int is_negative = 0;
     int j;
     if (num == INT_MIN) {
-        buffer[i++] = '-';
-        num /= 10;
-        is_negative = 1;
+        char min[] = "2147483648"
+        for (int k = 0; k < 11; k++) 
+        {
+            buffer[i++] = min[k];
+        }
+        return fwrite(buffer, sizeof(char), i, stdout);
     }
 
     if (num < 0) {
