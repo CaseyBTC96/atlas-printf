@@ -9,15 +9,19 @@ int print_d(va_list args)
     int calc, hold, track_dig;
     int value = va_arg(args, int);
 
-    if (value == INT_MIN) {
-        putchar('-');
+    if (value == INT_MIN) 
+    {
+        _putchar('-');
         count++;
         calc = INT_MAX;
-    } else if (value < 0) {
-        putchar('-');
+    } 
+    else if (value < 0) 
+    {
+        _putchar('-');
         count++;
         calc = abs(value);
-    } else {
+    } 
+    else {
         calc = value;
     }
 
@@ -29,14 +33,17 @@ int print_d(va_list args)
         track_dig = track_dig * 10;
     }
 
-    while (track_dig >= 1) {
-        if (value == INT_MIN && track_dig == 1) {
-            putchar('8');
+    while (track_dig >= 1) 
+    {
+        if (value == INT_MIN && track_dig == 1) 
+        {
+            _putchar('8');
             count++;
             track_dig = track_dig / 10;
-        } else {
+        } else 
+        {
             count++;
-            putchar((calc / track_dig) % 10 + '0');
+            _putchar((calc / track_dig) % 10 + '0');
             track_dig = track_dig / 10;
         }
     }
