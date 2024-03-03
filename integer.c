@@ -8,8 +8,8 @@ int print_d(va_list args)
     int is_negative = 0;
     int j;
     if (num == INT_MIN) {
-        buffer[i++] = '2';
-        num = -(num / -10);
+        buffer[i++] = '-';
+        num /= 10;
         is_negative = 1;
     }
 
