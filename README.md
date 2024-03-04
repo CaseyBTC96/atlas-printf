@@ -54,3 +54,5 @@ git clone https://github.com/CaseyBTC96/atlas-printf
 
 # Flowchart
 ![_printf  flowchart](https://github.com/CaseyBTC96/atlas-printf/assets/144287360/59781c6d-3176-4387-9d2e-ed8fac9a315b)
+
+Created By [Casey Paul](https://github.com/CaseyBTC96/) & [Elijah Poole](https://github.com/VengeanceIsHis/) & 
