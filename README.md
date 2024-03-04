@@ -53,3 +53,4 @@ git clone https://github.com/CaseyBTC96/atlas-printf
   + Output: Percent: [%%]
 
 # Flowchart
+![_printf  flowchart](https://github.com/CaseyBTC96/atlas-printf/assets/144287360/59781c6d-3176-4387-9d2e-ed8fac9a315b)
