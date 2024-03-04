@@ -39,7 +39,7 @@ _printf("String: %s", string);
 _printf("Integer: %d", integer); (or use "%i" for print integer, depends of the case).
 
 .SH SEE ALSO
-
+printf(1), _printf(2), printf(3), sprintf(), snprintf(), vsprintf(), vsnprintf().
 
 .SH BUGS
 If there is a bug, report to casey.paul@atlasschool.com or elijah.poole@atlasschool.com
