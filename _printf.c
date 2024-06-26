@@ -31,9 +31,9 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					m = get_func(format[i +  1]);
+					m = get_func(format[i + 1]);
 					if (m)
-						count += m(arg);
+						count += m(args);
 					else
 						count = _putchar(format[i]) + _putchar(format[i + 1]);
 					i += 2;
