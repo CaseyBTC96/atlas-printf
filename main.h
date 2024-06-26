@@ -12,7 +12,7 @@ typedef struct specifier
 {
 	char *valid;
 	int (*f)(va_list);
-}  spec;
+} spec;
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_c(va_list args);
