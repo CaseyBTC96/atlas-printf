@@ -1,7 +1,7 @@
 #ifndef our_printf
 #define our_printf
 #include <stdio.h>
-#include <stdarg.g>
+#include <stdarg.h>
 /**
  * struct specifier - struct specifier.
  * @valid: the valid character.
