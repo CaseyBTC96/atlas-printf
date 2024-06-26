@@ -10,8 +10,8 @@ int print_c(va_list args)
 {
 	int c;
 
-	c = va_args(args, int);
-	retrun (_putchar(c));
+	c = va_arg(args, int);
+	return (_putchar(c));
 }
 /**
  * print_s - prints a string
@@ -24,7 +24,7 @@ int print_s(va_list args)
 	char *str;
 
 	i = 0;
-	str = va_args(args, char*);
+	str = va_arg(args, char*);
 	if (str == NULL)
 		ssr = "(null)";
 	while (str[i] != '\0')
@@ -46,7 +46,7 @@ int print_percent(va_list args)
 	char *str;
 
 	str = "%";
-	if (va_args(args, int) == *str)
+	if (va_arg(args, int) == *str)
 	{
 		return (*str);
 	}
