@@ -71,7 +71,7 @@ int print_d(va_list args)
 			count += _putchar('-');
 		}
 		else
-			absolute = n:
+			absolute = n;
 	aux = absolute;
 	countnum = 1;
 	while (aux > 9)
