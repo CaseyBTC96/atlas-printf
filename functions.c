@@ -66,8 +66,8 @@ int print_d(va_list args)
 	count = 0;
 	n = va_arg(args, int);
 		if (n < 0)
-	       	{	
-	 		absolute = (n * -1);
+			{
+			absolute = (n * -1);
 			count += _putchar('-');
 		}
 		else
@@ -81,7 +81,7 @@ int print_d(va_list args)
 	}
 	while (countnum >= 1)
 	{
-		count += _putchar(((absolute / countnum) % 10) +'0');
+		count += _putchar(((absolute / countnum) % 10) + '0');
 		countnum /= 10;
 	}
 	return (count);
