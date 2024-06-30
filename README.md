@@ -5,7 +5,11 @@ This is a rebuilding of the printf function from scratch using structs instead o
 ### How to use
 printing text
 
-_printf("text");
+_printf("text\n");
+
+printing an int
+
+_printf("%d\n", number);
 ![enter image description here](https://imgur.com/RJ2q6oQ.png) 
 ### Authors
 Casey Paul
