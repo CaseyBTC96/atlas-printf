@@ -10,7 +10,7 @@ int print_c(va_list args)
 {
 	int c;
 
-	c = va_arg(args, int);
+	c = va_arg(args, int);/*calls variadic function*/
 	return (_putchar(c));
 }
 /**
@@ -24,10 +24,10 @@ int print_s(va_list args)
 	char *str;
 
 	i = 0;
-	str = va_arg(args, char*);
+	str = va_arg(args, char*);/*calls variadic function*/
 	if (str == NULL)
 		str = "(null)";
-	while (str[i] != '\0')
+	while (str[i] != '\0')/*prints null if empty else print normally*/
 	{
 		_putchar(str[i]);
 		i++;
@@ -46,7 +46,7 @@ int print_percent(va_list args)
 	char *str;
 
 	str = "%";
-	if (va_arg(args, int) == *str)
+	if (va_arg(args, int) == *str)/*prints %*/
 	{
 		return (*str);
 	}
@@ -64,7 +64,7 @@ int print_d(va_list args)
 	int n;
 
 	count = 0;
-	n = va_arg(args, int);
+	n = va_arg(args, int);/*calls variadic function*/
 		if (n < 0)
 			{
 			absolute = (n * -1);
